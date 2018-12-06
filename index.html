@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>217846 217862</title>
+</head>
+
+<body>
+    <header>
+        <h2>Authors of the document:</h2>
+        <p>Łukasz Starosta 217862</p>
+        <p>Piotr Karczewski 217846</p>
+    </header>
+    <main>
+        <h1>Theoretical part</h1>
+
+        <h1>Practical part</h1>
+        For all hosts physical location had been found using <code>https://www.site24x7.com/find-website-location.html</code>
+        and follwoing commands were used:
+        <ul>
+            <li>
+                To use ping type in:
+                <p>
+                    <code>ping [host address]</code>
+                </p>
+            </li>
+            <li>
+                To use pathping type in:
+                <p>
+                    <code>pathping [host address]</code>
+                </p>
+            </li>
+            <li>
+                To use tracert type in:
+                <p>
+                    <code>tracert [host address]</code>
+                </p>
+            </li>
+        </ul>
+        <ol>
+            <li>
+                <h4>Computer in a local network</h4>
+                <hr />
+                <ul>
+                    <li>
+                        Ping
+                        <img src="images/ping_local-machine.png" alt="" />
+                    </li>
+                    <li>
+                        Pathping
+                        <img src="images/pathping_local-machine.png" alt="" />
+                    </li>
+                    <li>
+                        Tracert
+                        <img src="images/tracert_local-machine.png" alt="" />
+                        Private network addresses:
+                        <p>10.128.88.36</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h4>ww.onet.pl</h4>
+                <hr />
+                <p>Location information:</p>
+                <p>Country Code: PL</p>
+                <p>Country Name: Poland</p>
+                <p>Region: Małopolskie</p>
+                <p>City: Kraków</p>
+                <ul>
+                    <li>
+                        Ping
+                        <img src="images/ping_onet.png" alt="" />
+                    </li>
+                    <li>
+                        Pathping
+                        <img src="images/pathping_onet.png" alt="" />
+                    </li>
+                    <li>
+                        Tracert
+                        <img src="images/tracert_onet.png" alt="" />
+                        Private network addresses:
+                        <p>10.128.0.1</p>
+                        <p>192.168.222.1</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h4>ww.google.com</h4>
+                <hr />
+                <p>Location information:</p>
+                <p>Country Code: US</p>
+                <p>Country Name: United States</p>
+                <p>Region: California</p>
+                <p>City: Mountain View</p>
+                <ul>
+                    <li>
+                        Ping
+                        <img src="images/ping_google-com.png" alt="" />
+                    </li>
+                    <li>
+                        Pathping
+                        <img src="images/pathping_google-com.png" alt="" />
+                    </li>
+                    <li>
+                        Tracert
+                        <img src="images/tracert_google-com.png" alt="" />
+                        Private network addresses:
+                        <p>10.128.0.1</p>
+                        <p>192.168.222.1</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h4>ww.google.pl</h4>
+                <hr />
+                <p>Location information:</p>
+                <p>Country Code: US</p>
+                <p>Country Name: United States</p>
+                <p>Region: California</p>
+                <p>City: Mountain View</p>
+                <ul>
+                    <li>
+                        Ping
+                        <img src="images/ping_google-pl.png" alt="" />
+                    </li>
+                    <li>
+                        Pathping
+                        <img src="images/pathping_google-pl.png" alt="" />
+                    </li>
+                    <li>
+                        Tracert
+                        <img src="images/tracert_google-pl.png" alt="" />
+                        Private network addresses:
+                        <p>10.128.0.1</p>
+                        <p>192.168.222.1</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h4>ww.lodman.pl</h4>
+                <hr />
+                <p>Location information:</p>
+                <p>Country Code: PL</p>
+                <p>Country Name: Poland</p>
+                <p>Region: Łódzkie</p>
+                <p>City: Łódź</p>
+                <ul>
+                    <li>
+                        Ping
+                        <img src="images/ping_lodman.png" alt="" />
+                    </li>
+                    <li>
+                        Pathping
+                        <img src="images/pathping_lodman.png" alt="" />
+                    </li>
+                    <li>
+                        Tracert
+                        <img src="images/tracert_lodman.png" alt="" />
+                        Private network addresses:
+                        <p>10.128.0.1</p>
+                        <p>192.168.222.1</p>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+        <h4>Finding IP and physical address of host machine</h4>
+        <hr />
+        <p>Type in:</p>
+        <code>ipconfig /all</code>
+        <img src="images/ipconfig_found.png" alt="" />
+    </main>
+</body>
+<style>
+    body {
+        background: #fafafa;
+        color: #363636;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0 10%;
+    }
+
+    h1 {
+        text-align: left;
+        margin-left: -5%;
+    }
+
+    header,
+    h2 {
+        text-align: center;
+        margin: 30px 0;
+    }
+
+    h4 {
+        display: inline;
+    }
+
+    li {
+        margin: 15px;
+    }
+
+    img {
+        display: block;
+        width: 90%;
+        margin: 15px auto;
+    }
+
+    table {
+        background: #fcfcfc;
+        ł margin: 20px auto;
+        border: 1px solid #333333;
+        text-align: center;
+        border-collapse: collapse;
+        border-spacing: 0px;
+    }
+
+    tr>* {
+        padding: 5px;
+        border: 1px solid #5a5a5a;
+    }
+
+    thead {
+        background: #a5a5a5;
+        font-weight: bold;
+    }
+</style>
+
+</html>
