@@ -1,229 +1,442 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>217846 217862</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>217846 217862</title>
-</head>
+    <body>
+        <header>
+            <h2>Authors of the document:</h2>
+            <p>Łukasz Starosta 217862</p>
+            <p>Piotr Karczewski 217846</p>
+        </header>
+        <main>
+            <h1>Theoretical part</h1>
+            <ul>
+                <li>
+                    <h3>IP address</h3>
+                    <p>
+                        It's a number given to a device using the IP protocol,
+                        which serves as an identifier in the third (network)
+                        layer of the OSI model. IP address can be assigned using
+                        the Address Resolution Protocol used to associate IP
+                        with MAC. It identifies the network interface of the
+                        host and provides the location of the host in the
+                        network, which means that a path to the device can be
+                        established. An IP address is generally used in order to
+                        find a device in a network. <br />
+                        There exist two types of IP addresses:
+                        <strong>IPv4</strong> and <strong>IPv6</strong>. The
+                        latter was defined, because there weren't enough IPv4
+                        addresses. <br />
+                        <br />
+                        An IPv4 address has a size of 32 bits and is usually
+                        represented in dot-decimal notation (4 decimal numbers
+                        from 0 to 255 separated by dots).
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/7/74/Ipv4_address.svg"
+                            style="height: 300px; width: 500px;"
+                        />
+                        <small>
+                            Exemplary IPv4 address
+                            <a
+                                href="https://upload.wikimedia.org/wikipedia/commons/7/74/Ipv4_address.svg"
+                            >
+                                source
+                            </a>
+                        </small>
+                        <br />
+                        <br />
+                        An IPv6 address is composed of 128 bits, so it greatly
+                        increases the amount of possible addresses (up to
+                        2<sup>128</sup>)
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/1/15/Ipv6_address.svg"
+                            style="height: 300px; width: 500px;"
+                        />
+                        <small>
+                            Exemplary IPv6 address
+                            <a
+                                href="https://upload.wikimedia.org/wikipedia/commons/1/15/Ipv6_address.svg"
+                            >
+                                source
+                            </a>
+                        </small>
+                    </p>
+                </li>
+                <li>
+                    <h3>Network subnets</h3>
+                    <p>
+                        They are logical subdivisions of an IP network so that
+                        hosts in the same network share identical beginning of
+                        their IP addresses. The process of dividing a network
+                        into subnets is called <strong>subnetting</strong>.
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/1/14/Subnetting_Concept-en.svg"
+                        />
+                        <small>
+                            Subnetting process
+                            <a
+                                href="https://upload.wikimedia.org/wikipedia/commons/1/14/Subnetting_Concept-en.svg"
+                                >source</a
+                            >
+                        </small>
+                        <br />
+                        This results in the logical division of an IP address
+                        into two fields, the network number or routing prefix
+                        and the rest field or host identifier. The rest field is
+                        an identifier for a specific host or network interface.
+                        For IPv4, a network may also be characterized by its
+                        subnet mask or netmask. They are also expressed in
+                        dot-decimal notation like an address. For example,
+                        255.255.255.0 is the subnet mask for the prefix
+                        198.51.100.0/24. <br />
+                        Based on the subnet mask we can derive e.g. the
+                        broadcast address. Subnetting may also enhance routing
+                        efficiency, or have advantages in network management
+                        when subnetworks are administratively controlled by
+                        different entities in a larger organization.<br />
+                        <br />
+                        When several devices are in the same subnetwork, they
+                        can communicate without the use of routers. The hosts
+                        are identified by their physical addresses.
+                    </p>
+                </li>
+                <li>
+                    <h3>Network classes</h3>
+                    <p>
+                        A classful network is a network addressing architecture
+                        used in the Internet from 1981 until the introduction of
+                        Classless Inter-Domain Routing in 1993. The method
+                        divides the IP address space for Internet Protocol
+                        version 4 (IPv4) into five address classes based on the
+                        leading four address bits. Classes A, B, and C provide
+                        unicast addresses for networks of three different
+                        network sizes. This architecture extended the addressing
+                        capability in the Internet, but did not prevent IP
+                        address exhaustion. The problem was that many sites
+                        needed larger address blocks than a Class C network
+                        provided, and therefore they received a Class B block,
+                        which was in most cases much larger than required. In
+                        the rapid growth of the Internet, the pool of unassigned
+                        Class B addresses was rapidly being depleted.
+                        <small
+                            ><a
+                                href="https://en.wikipedia.org/wiki/Classful_network"
+                                >source</a
+                            ></small
+                        >
+                    </p>
+                    <p>
+                        Class A comprises networks 1.0.0.0 through 127.0.0.0.
+                        The network number is contained in the first octet. It's
+                        mask is /8.
+                    </p>
+                    <p>
+                        Class B contains networks 128.0.0.0 through 191.255.0.0;
+                        the network number is in the first two octets. It's mask
+                        is /16.
+                    </p>
+                    <p>
+                        Class C networks range from 192.0.0.0 through
+                        223.255.255.0, with the network number being contained
+                        in the first three octets. It's mask is /24.
+                    </p>
+                    <p>
+                        Classes D (Multicast, that is between groups), E
+                        (Experimental), and F (for future use). Addresses range
+                        from 224.0.0.0 through 254.0.0.0.
+                    </p>
+                    <small
+                        ><a
+                            href="http://scientificsentence.net/Networking/Classes.html"
+                            >source</a
+                        ></small
+                    >
+                </li>
+                <li>
+                    <h3>Network mask</h3>
+                    <p>
+                        Subnet masks were introduced in response to the
+                        ineffective Classful routing (described in the previous
+                        point). It allows for grouping big networks into smaller
+                        subnetworks where hosts can be more easily identified.
+                    </p>
+                    <p>
+                        It is used to distinguish between the subnet address and
+                        the host address in an IP address. The mask address must
+                        be known to the routers and devices belonging to a
+                        subnet. When the router compares a mask address (e.g.
+                        255.255.255.0) with an IP address of a host, it gets the
+                        information about which part of the address identifies
+                        the host, and which one identifies the subnet.
+                    </p>
+                    <p>
+                        For example for the subnet mask of 255.255.255.0 and the
+                        IP address of 192.168.1.25 we can deduce that the host
+                        identifier is <strong>25</strong>, as it is comprised of
+                        the bits not "covered" by the mask.
+                    </p>
+                    <img src="images/subnet.png" />
+                    <small
+                        ><a
+                            href="https://en.wikipedia.org/wiki/Subnetwork#Determining_the_network_prefix"
+                            >source</a
+                        ></small
+                    >
+                </li>
+                <li>
+                    <h3>Routing table</h3>
+                    <p>
+                        A routing table, is a set of data collected by a router,
+                        which contains routes to network destinations and
+                        sometimes their distances (metrics) as well. It has the
+                        knowledge of the immediate network topology.
+                    </p>
+                    <p>
+                        Data transfer between nodes in a network depends on
+                        correct routing of the packets. If a packet cannot be
+                        send directly, then a node will pass the IP packet to a
+                        gateway in its LAN in order for it to correctly
+                        establish a path to the correct destination. The routing
+                        table keeps these paths and uses them to determine the
+                        correct ones for data packages.
+                    </p>
+                    <p>
+                        Routing tables can also contain "next hop" information.
+                        They are basically another routers on the packet's way
+                        to its final destination. This is called hop-by-hop
+                        routing and is the characteristic of the network layer
+                        in the OSI model.
+                    </p>
+                    <p>
+                        There exist directly and remotely connected networks.
+                        The latter can be reached only by forwarding a data
+                        packet to another router through dynamic or static,
+                        manually configured routes.
+                    </p>
+                    <p>
+                        A routing table consists of at least 3 fields: <br />
+                        Network ID - destination host subnet <br />
+                        Metric - Used to determine the shortest path to the
+                        gateway <br />
+                        Next hop - next router along the way to the packet's
+                        destination
+                    </p>
+                    <img src="images/routing_table.png" alt="" />
+                    <small>Exemplary routing table </small>
+                </li>
+                <li><h3>Default gateway</h3></li>
+                <li><h3>Broadcast</h3></li>
+                <li><h3>Subnet address</h3></li>
+                <li><h3>Private network address</h3></li>
+                <li><h3>Network address translation</h3></li>
+            </ul>
 
-<body>
-    <header>
-        <h2>Authors of the document:</h2>
-        <p>Łukasz Starosta 217862</p>
-        <p>Piotr Karczewski 217846</p>
-    </header>
-    <main>
-        <h1>Theoretical part</h1>
+            <h1>Practical part</h1>
+            For all hosts physical location had been found using
+            <code>https://www.site24x7.com/find-website-location.html</code> and
+            follwoing commands were used:
+            <ul>
+                <li>
+                    To use ping type in:
+                    <p><code>ping [host address]</code></p>
+                </li>
+                <li>
+                    To use pathping type in:
+                    <p><code>pathping [host address]</code></p>
+                </li>
+                <li>
+                    To use tracert type in:
+                    <p><code>tracert [host address]</code></p>
+                </li>
+            </ul>
+            <ol>
+                <li>
+                    <h4>Computer in a local network</h4>
+                    <hr />
+                    <ul>
+                        <li>
+                            Ping
+                            <img src="images/ping_local-machine.png" alt="" />
+                        </li>
+                        <li>
+                            Pathping
+                            <img
+                                src="images/pathping_local-machine.png"
+                                alt=""
+                            />
+                        </li>
+                        <li>
+                            Tracert
+                            <img
+                                src="images/tracert_local-machine.png"
+                                alt=""
+                            />
+                            Private network addresses:
+                            <p>10.128.88.36</p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h4>ww.onet.pl</h4>
+                    <hr />
+                    <p>Location information:</p>
+                    <p>Country Code: PL</p>
+                    <p>Country Name: Poland</p>
+                    <p>Region: Małopolskie</p>
+                    <p>City: Kraków</p>
+                    <ul>
+                        <li>Ping <img src="images/ping_onet.png" alt="" /></li>
+                        <li>
+                            Pathping
+                            <img src="images/pathping_onet.png" alt="" />
+                        </li>
+                        <li>
+                            Tracert
+                            <img src="images/tracert_onet.png" alt="" /> Private
+                            network addresses:
+                            <p>10.128.0.1</p>
+                            <p>192.168.222.1</p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h4>ww.google.com</h4>
+                    <hr />
+                    <p>Location information:</p>
+                    <p>Country Code: US</p>
+                    <p>Country Name: United States</p>
+                    <p>Region: California</p>
+                    <p>City: Mountain View</p>
+                    <ul>
+                        <li>
+                            Ping <img src="images/ping_google-com.png" alt="" />
+                        </li>
+                        <li>
+                            Pathping
+                            <img src="images/pathping_google-com.png" alt="" />
+                        </li>
+                        <li>
+                            Tracert
+                            <img src="images/tracert_google-com.png" alt="" />
+                            Private network addresses:
+                            <p>10.128.0.1</p>
+                            <p>192.168.222.1</p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h4>ww.google.pl</h4>
+                    <hr />
+                    <p>Location information:</p>
+                    <p>Country Code: US</p>
+                    <p>Country Name: United States</p>
+                    <p>Region: California</p>
+                    <p>City: Mountain View</p>
+                    <ul>
+                        <li>
+                            Ping <img src="images/ping_google-pl.png" alt="" />
+                        </li>
+                        <li>
+                            Pathping
+                            <img src="images/pathping_google-pl.png" alt="" />
+                        </li>
+                        <li>
+                            Tracert
+                            <img src="images/tracert_google-pl.png" alt="" />
+                            Private network addresses:
+                            <p>10.128.0.1</p>
+                            <p>192.168.222.1</p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h4>ww.lodman.pl</h4>
+                    <hr />
+                    <p>Location information:</p>
+                    <p>Country Code: PL</p>
+                    <p>Country Name: Poland</p>
+                    <p>Region: Łódzkie</p>
+                    <p>City: Łódź</p>
+                    <ul>
+                        <li>
+                            Ping <img src="images/ping_lodman.png" alt="" />
+                        </li>
+                        <li>
+                            Pathping
+                            <img src="images/pathping_lodman.png" alt="" />
+                        </li>
+                        <li>
+                            Tracert
+                            <img src="images/tracert_lodman.png" alt="" />
+                            Private network addresses:
+                            <p>10.128.0.1</p>
+                            <p>192.168.222.1</p>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+            <h4>Finding IP and physical address of host machine</h4>
+            <hr />
+            <p>Type in:</p>
+            <code>ipconfig /all</code>
+            <img src="images/ipconfig_found.png" alt="" />
+        </main>
+    </body>
+    <style>
+        body {
+            background: #fafafa;
+            color: #363636;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0 10%;
+        }
 
-        <h1>Practical part</h1>
-        For all hosts physical location had been found using <code>https://www.site24x7.com/find-website-location.html</code>
-        and follwoing commands were used:
-        <ul>
-            <li>
-                To use ping type in:
-                <p>
-                    <code>ping [host address]</code>
-                </p>
-            </li>
-            <li>
-                To use pathping type in:
-                <p>
-                    <code>pathping [host address]</code>
-                </p>
-            </li>
-            <li>
-                To use tracert type in:
-                <p>
-                    <code>tracert [host address]</code>
-                </p>
-            </li>
-        </ul>
-        <ol>
-            <li>
-                <h4>Computer in a local network</h4>
-                <hr />
-                <ul>
-                    <li>
-                        Ping
-                        <img src="images/ping_local-machine.png" alt="" />
-                    </li>
-                    <li>
-                        Pathping
-                        <img src="images/pathping_local-machine.png" alt="" />
-                    </li>
-                    <li>
-                        Tracert
-                        <img src="images/tracert_local-machine.png" alt="" />
-                        Private network addresses:
-                        <p>10.128.88.36</p>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <h4>ww.onet.pl</h4>
-                <hr />
-                <p>Location information:</p>
-                <p>Country Code: PL</p>
-                <p>Country Name: Poland</p>
-                <p>Region: Małopolskie</p>
-                <p>City: Kraków</p>
-                <ul>
-                    <li>
-                        Ping
-                        <img src="images/ping_onet.png" alt="" />
-                    </li>
-                    <li>
-                        Pathping
-                        <img src="images/pathping_onet.png" alt="" />
-                    </li>
-                    <li>
-                        Tracert
-                        <img src="images/tracert_onet.png" alt="" />
-                        Private network addresses:
-                        <p>10.128.0.1</p>
-                        <p>192.168.222.1</p>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <h4>ww.google.com</h4>
-                <hr />
-                <p>Location information:</p>
-                <p>Country Code: US</p>
-                <p>Country Name: United States</p>
-                <p>Region: California</p>
-                <p>City: Mountain View</p>
-                <ul>
-                    <li>
-                        Ping
-                        <img src="images/ping_google-com.png" alt="" />
-                    </li>
-                    <li>
-                        Pathping
-                        <img src="images/pathping_google-com.png" alt="" />
-                    </li>
-                    <li>
-                        Tracert
-                        <img src="images/tracert_google-com.png" alt="" />
-                        Private network addresses:
-                        <p>10.128.0.1</p>
-                        <p>192.168.222.1</p>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <h4>ww.google.pl</h4>
-                <hr />
-                <p>Location information:</p>
-                <p>Country Code: US</p>
-                <p>Country Name: United States</p>
-                <p>Region: California</p>
-                <p>City: Mountain View</p>
-                <ul>
-                    <li>
-                        Ping
-                        <img src="images/ping_google-pl.png" alt="" />
-                    </li>
-                    <li>
-                        Pathping
-                        <img src="images/pathping_google-pl.png" alt="" />
-                    </li>
-                    <li>
-                        Tracert
-                        <img src="images/tracert_google-pl.png" alt="" />
-                        Private network addresses:
-                        <p>10.128.0.1</p>
-                        <p>192.168.222.1</p>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <h4>ww.lodman.pl</h4>
-                <hr />
-                <p>Location information:</p>
-                <p>Country Code: PL</p>
-                <p>Country Name: Poland</p>
-                <p>Region: Łódzkie</p>
-                <p>City: Łódź</p>
-                <ul>
-                    <li>
-                        Ping
-                        <img src="images/ping_lodman.png" alt="" />
-                    </li>
-                    <li>
-                        Pathping
-                        <img src="images/pathping_lodman.png" alt="" />
-                    </li>
-                    <li>
-                        Tracert
-                        <img src="images/tracert_lodman.png" alt="" />
-                        Private network addresses:
-                        <p>10.128.0.1</p>
-                        <p>192.168.222.1</p>
-                    </li>
-                </ul>
-            </li>
-        </ol>
-        <h4>Finding IP and physical address of host machine</h4>
-        <hr />
-        <p>Type in:</p>
-        <code>ipconfig /all</code>
-        <img src="images/ipconfig_found.png" alt="" />
-    </main>
-</body>
-<style>
-    body {
-        background: #fafafa;
-        color: #363636;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        margin: 0 10%;
-    }
+        h1 {
+            text-align: left;
+            margin-left: -5%;
+        }
 
-    h1 {
-        text-align: left;
-        margin-left: -5%;
-    }
+        header,
+        h2 {
+            text-align: center;
+            margin: 30px 0;
+        }
 
-    header,
-    h2 {
-        text-align: center;
-        margin: 30px 0;
-    }
+        h4 {
+            display: inline;
+        }
 
-    h4 {
-        display: inline;
-    }
+        li {
+            margin: 15px;
+        }
 
-    li {
-        margin: 15px;
-    }
+        img {
+            display: block;
+            width: 90%;
+            margin: 15px auto;
+        }
 
-    img {
-        display: block;
-        width: 90%;
-        margin: 15px auto;
-    }
+        table {
+            background: #fcfcfc;
+            margin: 20px auto;
+            border: 1px solid #333333;
+            text-align: center;
+            border-collapse: collapse;
+            border-spacing: 0px;
+        }
 
-    table {
-        background: #fcfcfc;
-        ł margin: 20px auto;
-        border: 1px solid #333333;
-        text-align: center;
-        border-collapse: collapse;
-        border-spacing: 0px;
-    }
+        tr > * {
+            padding: 5px;
+            border: 1px solid #5a5a5a;
+        }
 
-    tr>* {
-        padding: 5px;
-        border: 1px solid #5a5a5a;
-    }
-
-    thead {
-        background: #a5a5a5;
-        font-weight: bold;
-    }
-</style>
-
+        thead {
+            background: #a5a5a5;
+            font-weight: bold;
+        }
+    </style>
 </html>
