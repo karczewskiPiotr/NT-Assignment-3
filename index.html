@@ -229,11 +229,109 @@
                     <img src="images/routing_table.png" alt="" />
                     <small>Exemplary routing table </small>
                 </li>
-                <li><h3>Default gateway</h3></li>
-                <li><h3>Broadcast</h3></li>
-                <li><h3>Subnet address</h3></li>
-                <li><h3>Private network address</h3></li>
-                <li><h3>Network address translation</h3></li>
+                <li>
+                    <h3>Default gateway</h3>
+                    <p>
+                        A gateway is a network node that serves as an access point to another network, often involving not only a change of addressing, but also a different networking technology. 
+                        More narrowly defined, a router forwards packets between networks with different network prefixes. 
+                        The networking software stack of each computer contains a routing table that specifies which interface is used for transmission and which router on the network is responsible for forwarding to a specific set of addresses. 
+                        If none of these forwarding rules is appropriate for a given destination address, the default gateway is chosen as the router of last resort. 
+                        The default gateway is specified by the configuration setting often called default route.
+                    </p>
+                    <p>Default gateways are typically one of two types:</p>
+                    <ul>
+                        <li>On home or small business networks with a broadband router to share the internet connection, the home router serves as the default gateway.</li>
+                        <li>On home or small business networks without a router, such as for residences with dial-up internet access, a router at the internet service provider location serves as the default gateway.</li>
+                    </ul>
+                    <p>
+                        On Windows default gateway IP address can be accessed through Command Prompt with the use of <code>/ipconfig</code> commnad. On macOS and Linux the <code>netstat</code> and <code>ip route</code> commands are used for finding the default gateway address.
+                    </p>
+                </li>
+                <li>
+                    <h3>Broadcast</h3>
+                    <p>In computer networking, broadcasting refers to transmitting a packet that will be received by every device on the network. 
+                        In practice, the scope of the broadcast is limited to a broadcast domain. 
+                        For example layer 2 broadcast traffic stays within a local area network (LAN) boundary</p>
+                        <img src="images/broadcast.png" alt=""/>
+                </li>
+                <li>
+                    <h3>Subnet address</h3>
+                    <p>
+                        A subnet address is the first address in a portion of the 32 bit IP addressing space (subnet) that you can use for your network.
+                    </p>
+                    <p>
+                        A subnet mask separates the IP address into the network and host addresses [(network)(host)]
+                    </p>
+                    <p>
+                        Subnet Mask is made by setting network bits to all "1"s and setting host bits to all "0"s. Within a given network, two host addresses are reserved for special purpose, and cannot be assigned to hosts. 
+                        The "0" address is assigned a network address and "255" is assigned to a broadcast address, and they cannot be assigned to hosts.
+                    </p>
+                    <p>
+                            Examples of commonly used netmasks for classed networks are 8-bits (Class A), 16-bits (Class B) and 24-bits (Class C),
+                    </p>
+                    <p>
+                            Applying a subnet mask to an IP address separates network address from host address. 
+                            The network bits are represented by the 1's in the mask, and the host bits are represented by 0's. 
+                            Performing a bitwise logical AND operation on the IP address with the subnet mask produces the network address. 
+                            For example, applying the Class C subnet mask to the IP address 216.3.128.12 produces the following network address:
+                    </p>
+                    <p>
+                        IP:   1101 1000 . 0000 0011 . 1000 0000 . 0000 1100   (216.003.128.012)
+                    </p>
+                    <p>
+                        Mask: 1111 1111 . 1111 1111 . 1111 1111 . 0000 0000   (255.255.255.000)
+                    </p>     
+                    <p>--------------------------------------------------------------------------------</p>     
+                    <p>
+                        1101 1000 . 0000 0011 . 1000 0000 . 0000 0000   (216.003.128.000)
+                    </p>
+                </li>
+                <li>
+                    <h3>Private network address</h3>
+                    <p>
+                            Private IP address is used to assign computers within private space without exsposing them directly to the Internet.
+                    </p>
+                    <p>
+                            A private IP address is the address space allocated by InterNIC to allow organizations to create their own private network. 
+                            There are three IP blocks (1 class A, 1 class B and 1 class C) reserved for a private use.
+                    </p>
+                    <p>
+                            For example, if you have multiple computers within your home you may want to use private IP addresses to address each computer within your home. 
+                            In this scenario, router gets the public IP address, and each of the computers, tablets and smartphones connected to the router (via wired or wifi) gets a private IP address from the router via DHCP protocol.
+                    </p>
+                    <p>
+                            The Internet Assigned Numbers Authority (IANA) reserves the following IP address blocks for use as private IP addresses:
+                    </p>
+                    <ul>
+                        <li>10.0.0.0 to 10.255.255.255</li>
+                        <li>172.16.0.0 to 172.31.255.255</li>
+                        <li>192.168.0.0 to 192.168.255.255</li>
+                    </ul>
+                    <p>
+                            The first set of IP addresses from above allow for over 16 million addresses, the second for over 1 million, and over 65,000 for the last range.
+                    </p>
+                    <p>
+                            Another range of private IP addresses is 169.254.0.0 to 169.254.255.255, but those addresses are for Automatic Private IP Addressing (APIPA) use only.
+                    </p>
+                </li>
+                <li>
+                    <h3>Network address translation</h3>
+                    <p>
+                        Network address translation (NAT) is a method of remapping one IP address space into another by modifying network address information in the IP header of packets while they are in transit across a traffic routing device. 
+                        The technique was originally used as a shortcut to avoid the need to readdress every host when a network was moved. 
+                        It has become a popular and essential tool in conserving global address space in the face of IPv4 address exhaustion.
+                    </p>
+                    <p>
+                        Internet requests that require Network Address Translation (NAT) are quite complex but happen so rapidly that the end user rarely knows it has occurred. 
+                        A workstation inside a network makes a request to a computer on the Internet. Routers within the network recognize that the request is not for a resource inside the network, so they send the request to the firewall. 
+                        The firewall sees the request from the computer with the internal IP. 
+                        It then makes the same request to the Internet using its own public address, and returns the response from the Internet resource to the computer inside the private network. 
+                        From the perspective of the resource on the Internet, it is sending information to the address of the firewall. 
+                        From the perspective of the workstation, it appears that communication is directly with the site on the Internet. 
+                        When NAT is used in this way, all users inside the private network access the Internet have the same public IP address when they use the Internet. 
+                        That means only one public addresses is needed for hundreds or even thousands of users.
+                    </p>
+                </li>
             </ul>
 
             <h1>Practical part</h1>
